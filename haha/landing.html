@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Haha - Your Daily Dose of Laughter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="icons/icon.png">
+  <style>
+    :root {
+      --primary-color: #6366F1;    /* AppTheme.primaryColor */
+      --secondary-color: #EC4899;  /* AppTheme.secondaryColor */
+      --background-color: #F8FAFC; /* AppTheme.backgroundColor */
+      --surface-color: #FFFFFF;    /* AppTheme.surfaceColor */
+      --text-color: #1E293B;       /* AppTheme.textColor */
+      --error-color: #EF4444;      /* AppTheme.errorColor */
+      --success-color: #10B981;    /* AppTheme.successColor */
+
+      /* For compatibility with existing CSS, map them */
+      --dark-color: var(--text-color);
+      --light-color: var(--background-color);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: var(--dark-color);
+      background: var(--light-color);
+    }
+    
+    a {
+      text-decoration: none;
+      color: var(--primary-color);
+    }
+    
+    ul {
+      list-style: none;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      overflow: hidden;
+    }
+    
+    /* Add padding to body for fixed header */
+    body {
+      padding-top: 70px;
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      color: white;
+      padding: 8rem 0 4rem;
+      text-align: center;
+    }
+    
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      font-weight: 600;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .btn-primary {
+      background: white;
+      color: var(--primary-color);
+    }
+    
+    .btn-primary:hover {
+      background: rgba(255,255,255,0.9);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .btn-secondary {
+      background: rgba(255,255,255,0.2);
+      color: white;
+      border: 2px solid white;
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.3);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .store-button {
+      display: flex;
+      align-items: center;
+      padding: 0.8rem 1.8rem;
+    }
+    
+    .store-button i {
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
+    }
+    
+    /* Features Section */
+    .features {
+      padding: 5rem 0;
+      background: white;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .section-title h3 {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+    
+    .section-title p {
+      font-size: 1.1rem;
+      color: #666;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .feature-card {
+      background: #f9f9f9;
+      border-radius: 10px;
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .feature-icon {
+      font-size: 3rem;
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+    }
+    
+    .feature-card h4 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    /* App Screenshots */
+    .screenshots {
+      padding: 5rem 0;
+      background: #f5f5f5;
+    }
+    
+    .screenshots-slider {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3rem;
+      overflow-x: auto;
+      padding: 1rem 0;
+    }
+    
+    .screenshot {
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      overflow: hidden;
+      width: 250px;
+      transition: transform 0.3s;
+    }
+    
+    .screenshot:hover {
+      transform: scale(1.05);
+    }
+    
+    .screenshot img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--dark-color);
+      color: white;
+      padding: 3rem 0;
+    }
+    
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+    
+    .footer-column h4 {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      color: var(--secondary-color);
+    }
+    
+    .footer-column ul li {
+      margin-bottom: 0.8rem;
+    }
+    
+    .footer-column ul li a {
+      color: #ddd;
+      transition: color 0.3s;
+    }
+    
+    .footer-column ul li a:hover {
+      color: var(--secondary-color);
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    
+    .social-links a {
+      color: white;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+    
+    .social-links a:hover {
+      color: var(--secondary-color);
+    }
+    
+    .copyright {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 7rem 0 3rem;
+      }
+      
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+      
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .screenshots-slider {
+        gap: 1rem;
+      }
+      
+      .screenshot {
+        width: 200px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero h2 {
+        font-size: 1.8rem;
+      }
+      
+      .hero p {
+        font-size: 1rem;
+      }
+      
+      .section-title h3 {
+        font-size: 2rem;
+      }
+      
+      .screenshot {
+        width: 150px;
+      }
+    }
+  </style>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation Component -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
+  </script>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h2>Your Daily Dose of Laughter</h2>
+      <p>Browse, share, and save hilarious jokes from around the world. Join our fun-loving community and make every day brighter with a laugh!</p>
+      <div class="cta-buttons">
+        <a href="https://play.google.com/store/apps/details?id=com.haha.app" class="btn btn-primary store-button">
+          <i class="fab fa-google-play"></i>
+          <span>Google Play</span>
+        </a>
+        <a href="https://apps.apple.com/app/haha/id123456789" class="btn btn-primary store-button">
+          <i class="fab fa-apple"></i>
+          <span>App Store</span>
+        </a>
+      </div>
+      <img src="https://via.placeholder.com/800x500?text=Haha+App+Preview" alt="Haha App Preview" style="max-width: 100%; border-radius: 10px; box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <div class="section-title">
+        <h3>Why You'll Love Haha</h3>
+        <p>Discover all the fun features that make Haha the perfect app for your daily dose of humor</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-share-alt"></i>
+          </div>
+          <h4>Share Jokes</h4>
+          <p>Share jokes from Reddit and other sources with friends and family</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-bookmark"></i>
+          </div>
+          <h4>Save Favorites</h4>
+          <p>Build your own collection of favorite jokes to revisit anytime</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h4>Multi-language</h4>
+          <p>Enjoy jokes in multiple languages with our comprehensive support</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h4>Modern Interface</h4>
+          <p>Experience a clean, easy-to-use interface designed for maximum enjoyment</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h4>Join Community</h4>
+          <p>Become part of a fun-loving community that shares your sense of humor</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-moon"></i>
+          </div>
+          <h4>Dark Mode</h4>
+          <p>Enjoy browsing jokes day or night with our eye-friendly dark mode</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Screenshots -->
+  <section id="screenshots" class="screenshots">
+    <div class="container">
+      <div class="section-title">
+        <h3>App Screenshots</h3>
+        <p>Take a peek at what makes Haha the perfect companion for your daily laugh</p>
+      </div>
+      <div class="screenshots-slider">
+        <div class="screenshot">
+          <img src="https://via.placeholder.com/250x500?text=Home+Screen" alt="Home Screen">
+        </div>
+        <div class="screenshot">
+          <img src="https://via.placeholder.com/250x500?text=Joke+Detail" alt="Joke Detail">
+        </div>
+        <div class="screenshot">
+          <img src="https://via.placeholder.com/250x500?text=Categories" alt="Categories">
+        </div>
+        <div class="screenshot">
+          <img src="https://via.placeholder.com/250x500?text=Favorites" alt="Favorites">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4>Haha App</h4>
+          <p>Your daily dose of laughter, right in your pocket.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#screenshots">Screenshots</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Download</h4>
+          <ul>
+            <li><a href="https://play.google.com/store/apps/details?id=com.haha.app">Google Play</a></li>
+            <li><a href="https://apps.apple.com/app/haha/id123456789">App Store</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:outcrashmedia@gmail.com">outcrashmedia@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2025 Haha App. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
