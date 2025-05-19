@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Impressum | Haha App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="icons/icon.png">
+  <style>
+    :root {
+      --primary-color: #6366F1;    /* AppTheme.primaryColor */
+      --secondary-color: #EC4899;  /* AppTheme.secondaryColor */
+      --background-color: #F8FAFC; /* AppTheme.backgroundColor */
+      --surface-color: #FFFFFF;    /* AppTheme.surfaceColor */
+      --text-color: #1E293B;       /* AppTheme.textColor */
+      --error-color: #EF4444;      /* AppTheme.errorColor */
+      --success-color: #10B981;    /* AppTheme.successColor */
+
+      /* For compatibility with existing CSS, map them */
+      --dark-color: var(--text-color);
+      --light-color: var(--background-color);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: var(--dark-color);
+      background: var(--light-color);
+      padding-top: 70px;
+    }
+    
+    a {
+      text-decoration: none;
+      color: var(--primary-color);
+    }
+    
+    ul {
+      list-style: none;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      overflow: hidden;
+    }
+    
+    .content {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 3rem;
+      margin: 2rem auto;
+      max-width: 900px;
+    }
+    
+    h1 {
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+    
+    h2 {
+      color: var(--secondary-color);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    
+    section {
+      margin-bottom: 2rem;
+    }
+    
+    .contact {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #666;
+    }
+    
+    @media (max-width: 768px) {
+      .content {
+        padding: 2rem;
+        margin: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Component -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
+  </script>
+  
+  <div class="container">
+    <div class="content">
+      <h1>Impressum</h1>
+
+      <section>
+        <h2>Angaben gemäß § 5 DDG</h2>
+        <p>
+          <strong>Diensteanbieter:</strong><br>
+          outcrashmedia<br>
+          Vertreten durch: Huy-Long Nguyen-Böllet<br>
+          Illerstraße 7<br>
+          90542 Eckental<br>
+          Deutschland
+        </p>
+      </section>
+
+      <section>
+        <h2>Kontaktmöglichkeiten</h2>
+        <p>
+          <strong>E-Mail:</strong> outcrashmedia@gmail.com<br>
+          <strong>Telefon:</strong> Auf Anfrage<br>
+          <strong>Kontaktformular:</strong> Verfügbar in der Haha App
+        </p>
+      </section>
+
+      <section>
+        <h2>Weitere rechtliche Hinweise</h2>
+        <p>
+          <strong>Umsatzsteuer-ID:</strong> Wird bei Bedarf nachgereicht<br>
+          <strong>Wirtschafts-ID:</strong> Wird bei Bedarf nachgereicht<br>
+          <strong>Handelsregister:</strong> Nicht eingetragen
+        </p>
+      </section>
+
+      <section>
+        <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+        <p>
+          Huy-Long Nguyen-Böllet<br>
+          Illerstraße 7<br>
+          90542 Eckental<br>
+          Deutschland
+        </p>
+      </section>
+
+      <section>
+        <h2>Streitschlichtung</h2>
+        <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr</a></p>
+        <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+      </section>
+
+      <div class="contact">
+        &copy; 2025 Haha App. Alle Rechte vorbehalten.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
