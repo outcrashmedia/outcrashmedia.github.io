@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delete Account | Haha App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="icons/icon.png">
+  <style>
+    :root {
+      --primary-color: #6366F1;    /* AppTheme.primaryColor */
+      --secondary-color: #EC4899;  /* AppTheme.secondaryColor */
+      --background-color: #F8FAFC; /* AppTheme.backgroundColor */
+      --surface-color: #FFFFFF;    /* AppTheme.surfaceColor */
+      --text-color: #1E293B;       /* AppTheme.textColor */
+      --error-color: #EF4444;      /* AppTheme.errorColor */
+      --success-color: #10B981;    /* AppTheme.successColor */
+
+      /* For compatibility with existing CSS, map them */
+      --dark-color: var(--text-color);
+      --light-color: var(--background-color);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: var(--dark-color);
+      background: var(--light-color);
+      padding-top: 70px;
+    }
+    
+    a {
+      text-decoration: none;
+      color: var(--primary-color);
+    }
+    
+    ul {
+      list-style: none;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      overflow: hidden;
+    }
+    
+    .content {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 3rem;
+      margin: 2rem auto;
+      max-width: 900px;
+    }
+    
+    h1 {
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+    
+    h2 {
+      color: var(--secondary-color);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    
+    section {
+      margin-bottom: 2rem;
+    }
+    
+    .contact {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #666;
+    }
+    
+    .steps {
+      background: var(--background-color);
+      padding: 2rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+
+    .steps ol {
+      margin-left: 1.5rem;
+    }
+
+    .steps li {
+      margin-bottom: 1rem;
+    }
+
+    .email-button {
+      display: inline-block;
+      background: var(--primary-color);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+      font-weight: 500;
+      transition: background-color 0.3s;
+    }
+
+    .email-button:hover {
+      background: var(--secondary-color);
+    }
+    
+    @media (max-width: 768px) {
+      .content {
+        padding: 2rem;
+        margin: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Component -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
+  </script>
+  
+  <div class="container">
+    <div class="content">
+      <h1>Delete Account</h1>
+
+      <section>
+        <p>As a user of the Haha App, you have the right to request the deletion of your account and associated personal data. We have established a simple process to help you with this.</p>
+      </section>
+
+      <section class="steps">
+        <h2>How to delete your account:</h2>
+        <ol>
+          <li>Send an email to <a href="mailto:outcrashmedia@gmail.com">outcrashmedia@gmail.com</a></li>
+          <li>Use the subject line "Haha App - Account Deletion Request"</li>
+          <li>Include your registered email address in the email</li>
+        </ol>
+        <a href="mailto:outcrashmedia@gmail.com?subject=Haha App - Account Deletion Request" class="email-button">Send Email</a>
+      </section>
+
+      <section>
+        <h2>What data will be deleted?</h2>
+        <p>After confirming your request, the following data will be deleted:</p>
+        <ul>
+          <li>Your user account and profile information</li>
+          <li>Jokes created and shared by you</li>
+          <li>Your activity data (likes, comments, etc.)</li>
+          <li>Your saved preferences</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Data Retention</h2>
+        <p>For legal reasons and service improvement purposes, certain data may be retained for a limited period:</p>
+        <ul>
+          <li>Anonymized usage statistics: Permanently retained for analytical purposes</li>
+          <li>Legally required information: Retained according to legal requirements (typically 6 years)</li>
+          <li>Security-relevant logs: Retained for 30 days</li>
+        </ul>
+      </section>
+
+      <div class="contact">
+        &copy; 2025 Haha App. All rights reserved.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
