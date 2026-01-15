@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NextScan - Professioneller Dokumentenscanner für iOS und Android. Scannen Sie Dokumente, erstellen Sie PDFs und laden Sie sie direkt in Ihre Nextcloud hoch.">
+    <meta name="keywords" content="Dokumentenscanner, PDF Scanner, Nextcloud, iOS, Android, Mobile Scanner">
+    <meta name="author" content="NextScan">
+    <title>NextScan - Professioneller Dokumentenscanner</title>
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-logo">
+                <img src="favicon.png" alt="NextScan" style="height: 28px; width: 28px; vertical-align: middle; margin-right: 0.5rem;">
+                NextScan
+            </a>
+            <button class="nav-toggle" aria-label="Navigation umschalten" aria-expanded="false">
+                ☰
+            </button>
+            <ul class="nav-links">
+                <li><a href="#features" class="nav-link">Funktionen</a></li>
+                <li><a href="#" class="nav-link" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Download</a></li>
+                <li><a href="privacy.html" class="nav-link">Datenschutz</a></li>
+                <li><a href="impressum.html" class="nav-link">Impressum</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Mobiler Dokumentenscanner für Nextcloud</h1>
+                <p>
+                    Scannen Sie Dokumente und laden Sie sie direkt in Ihre Nextcloud hoch. 
+                    Der mobile Scanner, der nahtlos mit Ihrem Nextcloud-Server zusammenarbeitet.
+                </p>
+                <div class="app-store-buttons">
+                    <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" class="app-store-badge">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download im App Store" style="height: 50px;">
+                    </a>
+                    <a href="https://play.google.com" target="_blank" rel="noopener noreferrer" class="app-store-badge">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Jetzt bei Google Play" style="height: 50px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Screenshots Section -->
+    <section id="screenshots" class="section-lg" style="background: var(--bg-primary);">
+        <div class="container">
+            <div class="text-center mb-lg">
+                <h2>Die App in Aktion</h2>
+                <p style="font-size: 1.125rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto;">
+                    Einfach zu bedienen, professionelle Ergebnisse
+                </p>
+            </div>
+            
+            <div style="display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap; padding: 2rem 0;">
+                <!-- Screenshot 1: Login -->
+                <div style="text-align: center;">
+                    <div style="width: 280px; border-radius: 30px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden;">
+                        <img src="img/1.png" alt="Nextcloud Login - Verbinden Sie sich mit Ihrem Server" style="width: 100%; height: auto; display: block;">
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.875rem;">Nextcloud-Verbindung</p>
+                </div>
+
+                <!-- Screenshot 2: Main Screen -->
+                <div style="text-align: center;">
+                    <div style="width: 280px; border-radius: 30px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden;">
+                        <img src="img/2.png" alt="Hauptbildschirm - Bereit zum Scannen" style="width: 100%; height: auto; display: block;">
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.875rem;">Scannen starten</p>
+                </div>
+
+                <!-- Screenshot 3: Upload -->
+                <div style="text-align: center;">
+                    <div style="width: 280px; border-radius: 30px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden;">
+                        <img src="img/3.png" alt="Upload zu Nextcloud - Wählen Sie Ihren Zielordner" style="width: 100%; height: auto; display: block;">
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.875rem;">Direkt zu Nextcloud</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features section-lg">
+        <div class="container">
+            <div class="text-center">
+                <h2>Alles, was Sie für mobiles Scannen brauchen</h2>
+                <p style="font-size: 1.125rem; max-width: 700px; margin: 0 auto; color: var(--text-secondary);">
+                    NextScan kombiniert modernste Technologie mit einfacher Bedienung für professionelle Ergebnisse
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📸</div>
+                    <h3>Automatische Kantenerkennung</h3>
+                    <p>
+                        Intelligente Erkennung von Dokumenträndern für perfekt zugeschnittene Scans. 
+                        Keine manuellen Anpassungen mehr nötig.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📄</div>
+                    <h3>PDF-Erstellung</h3>
+                    <p>
+                        Erstellen Sie aus Ihren Scans professionelle PDF-Dokumente. 
+                        Kombinieren Sie mehrere Seiten in einem Dokument.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">☁️</div>
+                    <h3>Nextcloud Integration</h3>
+                    <p>
+                        Speziell entwickelt für Nextcloud. Verbinden Sie sich mit <strong>Ihrem eigenen</strong> Nextcloud-Server und laden Sie Dokumente direkt hoch. 
+                        Nahtlose Integration ohne Umwege.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>100% Datenschutz</h3>
+                    <p>
+                        <strong>Wir speichern KEINE Daten auf unseren Servern.</strong> Alle Dokumente bleiben lokal auf Ihrem Gerät. 
+                        Keine Analytics, kein Tracking Ihrer Dokumente.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Schnell & Einfach</h3>
+                    <p>
+                        Scannen Sie Dokumente in Sekundenschnelle. 
+                        Intuitive Benutzeroberfläche für maximale Produktivität.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💎</div>
+                    <h3>NextScan Pro</h3>
+                    <p>
+                        Upgrade auf Pro für werbefreies Scannen und Zugriff auf alle Premium-Funktionen.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="text-center mb-lg">
+                <h2>So einfach geht's</h2>
+                <p style="font-size: 1.125rem; color: var(--text-secondary);">
+                    In nur drei Schritten zum perfekten Scan
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card" style="background: var(--bg-primary);">
+                    <div style="font-size: 3rem; font-weight: 700; color: var(--primary-color); margin-bottom: 1rem;">1</div>
+                    <h3>Dokument scannen</h3>
+                    <p>
+                        Öffnen Sie die App und richten Sie Ihre Kamera auf das Dokument. 
+                        Die automatische Kantenerkennung erledigt den Rest.
+                    </p>
+                </div>
+
+                <div class="feature-card" style="background: var(--bg-primary);">
+                    <div style="font-size: 3rem; font-weight: 700; color: var(--primary-color); margin-bottom: 1rem;">2</div>
+                    <h3>Optimieren & Bearbeiten</h3>
+                    <p>
+                        Passen Sie den Zuschnitt an und optimieren Sie die Bildqualität. 
+                        Fügen Sie bei Bedarf weitere Seiten hinzu.
+                    </p>
+                </div>
+
+                <div class="feature-card" style="background: var(--bg-primary);">
+                    <div style="font-size: 3rem; font-weight: 700; color: var(--primary-color); margin-bottom: 1rem;">3</div>
+                    <h3>Hochladen</h3>
+                    <p>
+                        Laden Sie das PDF-Dokument direkt in Ihre Nextcloud hoch. 
+                        Fertig!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy & Pro Section -->
+    <section id="download" class="section-lg" style="background: var(--bg-primary);">
+        <div class="container text-center">
+            <!-- Privacy First Notice -->
+            <div style="padding: 2rem; background: var(--bg-secondary); border: 2px solid var(--primary-color); border-radius: 16px; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔒</div>
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem;">100% Privacy First</h3>
+                <p style="font-size: 1.125rem; color: var(--text-primary); margin-bottom: 1rem;">
+                    <strong>NextScan speichert KEINE Daten auf eigenen Servern</strong>
+                </p>
+                <ul style="list-style: none; padding: 0; margin: 1rem auto; max-width: 500px; text-align: left;">
+                    <li style="padding: 0.5rem 0; color: var(--text-secondary);">✓ Alle Dokumente bleiben lokal auf Ihrem Gerät</li>
+                    <li style="padding: 0.5rem 0; color: var(--text-secondary);">✓ Keine Analytics oder Tracking Ihrer Dokumente</li>
+                    <li style="padding: 0.5rem 0; color: var(--text-secondary);">✓ Verbindung nur zu Ihrem eigenen Nextcloud-Server</li>
+                    <li style="padding: 0.5rem 0; color: var(--text-secondary);">✓ Nur AdMob (Werbung) und RevenueCat (Abonnement) als Drittanbieter</li>
+                </ul>
+            </div>
+
+            <!-- NextScan Pro -->
+            <div style="padding: 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; color: white;">
+                <h3 style="color: white; font-size: 1.75rem; margin-bottom: 1rem;">NextScan Pro</h3>
+                <p style="font-size: 1.125rem; max-width: 600px; margin: 0 auto 1.5rem; color: rgba(255,255,255,0.95);">
+                    Upgrade auf NextScan Pro für ein werbefreies Erlebnis und Premium-Funktionen
+                </p>
+                <ul style="list-style: none; padding: 0; margin: 1.5rem auto 2rem; max-width: 400px; text-align: left;">
+                    <li style="padding: 0.5rem 0; color: rgba(255,255,255,0.95);">✓ Keine Werbung</li>
+                    <li style="padding: 0.5rem 0; color: rgba(255,255,255,0.95);">✓ Unbegrenzte Scans</li>
+                    <li style="padding: 0.5rem 0; color: rgba(255,255,255,0.95);">✓ Premium Support</li>
+                    <li style="padding: 0.5rem 0; color: rgba(255,255,255,0.95);">✓ Zukünftige Features</li>
+                </ul>
+                <p style="color: rgba(255,255,255,0.8); font-size: 0.875rem;">
+                    Upgrade direkt in der App verfügbar
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>NextScan</h4>
+                    <p>
+                        Der professionelle Dokumentenscanner für Nextcloud.
+                        Für iOS und Android verfügbar.
+                    </p>
+                    <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                        * NextScan ist eine unabhängige App und nicht offiziell von Nextcloud GmbH entwickelt oder unterstützt.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Rechtliches</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Datenschutzerklärung</a></li>
+                        <li><a href="impressum.html">Impressum</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Download</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer">iOS App Store</a></li>
+                        <li><a href="https://play.google.com" target="_blank" rel="noopener noreferrer">Google Play Store</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 NextScan. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Script -->
+    <script src="cookie-consent.js"></script>
+</body>
+</html>
