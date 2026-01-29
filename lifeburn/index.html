@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta
+            name="description"
+            content="Lifeburn - Der ultimative MTG Life Counter für Commander & Multiplayer. Verfolge Lebenspunkte, Commander Damage, Poison Counter und mehr für 2-6 Spieler."
+        >
+        <meta
+            name="keywords"
+            content="MTG, Magic The Gathering, Life Counter, Commander, EDH, Multiplayer, Poison Counter, Commander Damage, MTG App"
+        >
+        <meta name="author" content="Lifeburn">
+        <title>Lifeburn - MTG Life Counter für Commander & Multiplayer</title>
+        <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+        <link rel="apple-touch-icon" sizes="192x192" href="favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        >
+        <link rel="stylesheet" href="styles.css">
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <!-- Navigation Header -->
+        <header class="header">
+            <nav class="nav">
+                <a href="index.html" class="nav-logo">
+                    <img
+                        src="favicon.png"
+                        alt="Lifeburn"
+                        style="height: 28px; width: 28px; vertical-align: middle; margin-right: 0.5rem"
+                    >
+                    Lifeburn
+                </a>
+                <button
+                    class="nav-toggle"
+                    aria-label="Navigation umschalten"
+                    aria-expanded="false"
+                >
+                    ☰
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#features" class="nav-link">Funktionen</a></li>
+                    <li>
+                        <a
+                            href="#"
+                            class="nav-link"
+                            onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+                        >Download</a>
+                    </li>
+                    <li>
+                        <a href="privacy.html" class="nav-link">Datenschutz</a>
+                    </li>
+                    <li>
+                        <a href="impressum.html" class="nav-link">Impressum</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Der ultimative MTG Life Counter für Commander & Multiplayer</h1>
+                    <p>
+                        Verfolge Lebenspunkte, Commander Damage, Poison Counter und mehr 
+                        für 2-6 Spieler. Das perfekte Tool für Commander (EDH), Standard, 
+                        Two-Headed Giant und alle anderen Magic: The Gathering Formate.
+                    </p>
+                    <div class="app-store-buttons">
+                        <a
+                            href="https://apps.apple.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="app-store-badge"
+                        >
+                            <img
+                                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                                alt="Download im App Store"
+                                style="height: 50px"
+                            >
+                        </a>
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.outcrashmedia.mtglifecounter"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="app-store-badge"
+                        >
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                alt="Jetzt bei Google Play"
+                                style="height: 50px"
+                            >
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- App Screenshots Section -->
+        <section
+            id="screenshots"
+            class="section-lg"
+            style="background: var(--bg-primary)"
+        >
+            <div class="container">
+                <div class="text-center mb-lg">
+                    <h2>Die App in Aktion</h2>
+                    <p
+                        style="font-size: 1.125rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto"
+                    >
+                        Übersichtlich, schnell und für jeden Spielmodus geeignet
+                    </p>
+                </div>
+
+                <div
+                    style="display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap; padding: 2rem 0"
+                >
+                    <!-- Screenshot 1: Multi-Player View -->
+                    <div style="text-align: center">
+                        <div
+                            style="width: 280px; border-radius: 30px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); overflow: hidden"
+                        >
+                            <img
+                                src="img/1.png"
+                                alt="Multi-Player Life Counter - Bis zu 6 Spieler gleichzeitig"
+                                style="width: 100%; height: auto; display: block"
+                            >
+                        </div>
+                        <p
+                            style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.875rem"
+                        >
+                            Multi-Player Ansicht
+                        </p>
+                    </div>
+
+                    <!-- Screenshot 2: Commander Damage -->
+                    <div style="text-align: center">
+                        <div
+                            style="width: 280px; border-radius: 30px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); overflow: hidden"
+                        >
+                            <img
+                                src="img/2.png"
+                                alt="Commander Damage Tracking - Verfolge Schaden von jedem Commander"
+                                style="width: 100%; height: auto; display: block"
+                            >
+                        </div>
+                        <p
+                            style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.875rem"
+                        >
+                            Commander Damage
+                        </p>
+                    </div>
+
+                    <!-- Screenshot 3: Counters & Dice -->
+                    <div style="text-align: center">
+                        <div
+                            style="width: 280px; border-radius: 30px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); overflow: hidden"
+                        >
+                            <img
+                                src="img/3.png"
+                                alt="Counter Management & Würfelfunktion"
+                                style="width: 100%; height: auto; display: block"
+                            >
+                        </div>
+                        <p
+                            style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.875rem"
+                        >
+                            Counter & Würfel
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features section-lg">
+            <div class="container">
+                <div class="text-center">
+                    <h2>Alles, was du für deine MTG-Runden brauchst</h2>
+                    <p
+                        style="font-size: 1.125rem; max-width: 700px; margin: 0 auto; color: var(--text-secondary)"
+                    >
+                        Von MTG-Spielern für MTG-Spieler entwickelt - mit allen Features, 
+                        die du für Commander, Standard und andere Formate benötigst
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <h3>2-6 Spieler Support</h3>
+                        <p>
+                            Perfekt für Standard (1v1), Commander Pods, Two-Headed Giant 
+                            und große Multiplayer-Runden. Jeder Spieler bekommt eine 
+                            vollständige Bildschirmansicht.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">⚔️</div>
+                        <h3>Commander Damage Tracking</h3>
+                        <p>
+                            Verfolge automatisch den Schaden, den jeder Commander verursacht. 
+                            Keine Verwirrung mehr darüber, wer wie viel Schaden erhalten hat.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">☠️</div>
+                        <h3>Poison & Andere Counter</h3>
+                        <p>
+                            Poison, Energy, Rad, Storm, Ticket, Acorn - alle wichtigen 
+                            Counter im Überblick. Verliere nie wieder den Überblick über 
+                            alternative Siegbedingungen.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📜</div>
+                        <h3>History Log</h3>
+                        <p>
+                            Vollständige Historie aller Life-Änderungen und Counter-Anpassungen. 
+                            Perfekt zum Auflösen von Unstimmigkeiten und Nachvollziehen des Spielverlaufs.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🎲</div>
+                        <h3>Würfel & Münzwurf</h3>
+                        <p>
+                            Integrierter Würfelroller mit d4, d6, d8, d10, d12 und d20. 
+                            Plus Münzwurf-Funktion. Alles, was du fürs Spiel brauchst.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Vollbild-Design</h3>
+                        <p>
+                            Jeder Spieler bekommt maximalen Bildschirmplatz ohne störende 
+                            Lücken. Perfekt ablesbar aus jedem Winkel am Tisch.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="section" style="background: var(--bg-secondary)">
+            <div class="container">
+                <div class="text-center mb-lg">
+                    <h2>So einfach geht's</h2>
+                    <p
+                        style="font-size: 1.125rem; color: var(--text-secondary)"
+                    >
+                        In drei Schritten zur perfekten Commander-Runde
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <div
+                        class="feature-card"
+                        style="background: var(--bg-primary)"
+                    >
+                        <div
+                            style="font-size: 3rem; font-weight: 700; color: var(--primary-color); margin-bottom: 1rem"
+                        >
+                            1
+                        </div>
+                        <h3>Spieleranzahl wählen</h3>
+                        <p>
+                            Wähle 2-6 Spieler und stelle die Startlebenspunkte ein 
+                            (20 für Standard, 40 für Commander). Passe Namen und 
+                            Farben individuell an.
+                        </p>
+                    </div>
+
+                    <div
+                        class="feature-card"
+                        style="background: var(--bg-primary)"
+                    >
+                        <div
+                            style="font-size: 3rem; font-weight: 700; color: var(--primary-color); margin-bottom: 1rem"
+                        >
+                            2
+                        </div>
+                        <h3>Leben & Counter verwalten</h3>
+                        <p>
+                            Tippe auf die linke Seite zum Verringern, rechts zum Erhöhen. 
+                            Füge Counter hinzu und verfolge Commander Damage mit einem Tap.
+                        </p>
+                    </div>
+
+                    <div
+                        class="feature-card"
+                        style="background: var(--bg-primary)"
+                    >
+                        <div
+                            style="font-size: 3rem; font-weight: 700; color: var(--primary-color); margin-bottom: 1rem"
+                        >
+                            3
+                        </div>
+                        <h3>Spiel genießen</h3>
+                        <p>
+                            Konzentriere dich aufs Spiel, nicht aufs Zählen. Die App 
+                            erledigt das Tracking für dich - übersichtlich und zuverlässig.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy & Pro Section -->
+        <section
+            id="download"
+            class="section-lg"
+            style="background: var(--bg-primary)"
+        >
+            <div class="container text-center">
+                <!-- Privacy First Notice -->
+                <div
+                    style="padding: 2rem; background: var(--bg-secondary); border: 2px solid var(--primary-color); border-radius: 16px; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto"
+                >
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem">🔒</div>
+                    <h3
+                        style="color: var(--primary-color); margin-bottom: 1rem"
+                    >
+                        Deine Daten bleiben bei dir
+                    </h3>
+                    <p
+                        style="font-size: 1.125rem; color: var(--text-primary); margin-bottom: 1rem"
+                    >
+                        <strong>Lifeburn speichert KEINE Spieldaten auf externen Servern</strong>
+                    </p>
+                    <ul
+                        style="list-style: none; padding: 0; margin: 1rem auto; max-width: 500px; text-align: left"
+                    >
+                        <li
+                            style="padding: 0.5rem 0; color: var(--text-secondary)"
+                        >
+                            ✓ Alle Daten bleiben lokal auf deinem Gerät
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; color: var(--text-secondary)"
+                        >
+                            ✓ Kein Tracking deiner Spiele oder Strategien
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; color: var(--text-secondary)"
+                        >
+                            ✓ Nur AdMob (Werbung) und RevenueCat (Abo-Verwaltung)
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; color: var(--text-secondary)"
+                        >
+                            ✓ Keine Anmeldung oder Account erforderlich
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Lifeburn Pro -->
+                <div
+                    style="padding: 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; color: white"
+                >
+                    <h3
+                        style="color: white; font-size: 1.75rem; margin-bottom: 1rem"
+                    >
+                        Lifeburn Pro
+                    </h3>
+                    <p
+                        style="font-size: 1.125rem; max-width: 600px; margin: 0 auto 1.5rem; color: rgba(255, 255, 255, 0.95)"
+                    >
+                        Upgrade auf Lifeburn Pro für ein werbefreies Erlebnis 
+                        und unterstütze die Weiterentwicklung der App
+                    </p>
+                    <ul
+                        style="list-style: none; padding: 0; margin: 1.5rem auto 2rem; max-width: 400px; text-align: left"
+                    >
+                        <li
+                            style="padding: 0.5rem 0; color: rgba(255, 255, 255, 0.95)"
+                        >
+                            ✓ Keine Werbung
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; color: rgba(255, 255, 255, 0.95)"
+                        >
+                            ✓ Unbegrenzte Spiele
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; color: rgba(255, 255, 255, 0.95)"
+                        >
+                            ✓ Premium Support
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; color: rgba(255, 255, 255, 0.95)"
+                        >
+                            ✓ Früher Zugang zu neuen Features
+                        </li>
+                    </ul>
+                    <p
+                        style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem"
+                    >
+                        Upgrade direkt in der App verfügbar
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>Lifeburn</h4>
+                        <p>
+                            Der ultimative MTG Life Counter für Commander & Multiplayer. 
+                            Für iOS und Android verfügbar.
+                        </p>
+                        <p
+                            style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem"
+                        >
+                            * Lifeburn ist ein inoffizielles Fan-Projekt und nicht von 
+                            Wizards of the Coast unterstützt oder gesponsert.
+                        </p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Rechtliches</h4>
+                        <ul class="footer-links">
+                            <li>
+                                <a href="privacy.html">Datenschutzerklärung</a>
+                            </li>
+                            <li><a href="impressum.html">Impressum</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Download</h4>
+                        <ul class="footer-links">
+                            <li>
+                                <a
+                                    href="https://apps.apple.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >iOS App Store</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://play.google.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >Google Play Store</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Lifeburn. Alle Rechte vorbehalten.</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
