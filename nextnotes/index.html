@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta
+            name="description"
+            content="NextNotes - The reliable, privacy-first Nextcloud Notes client for iOS and Android. Write, edit, and sync your Markdown notes without ever losing a keystroke."
+        >
+        <meta
+            name="keywords"
+            content="Nextcloud Notes, Markdown Notes, iOS, Android, Flutter, Note Taking App, Self-hosted"
+        >
+        <meta name="author" content="NextNotes">
+        <title>NextNotes - Your Nextcloud Notes, Perfected</title>
+        <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+        <link rel="apple-touch-icon" sizes="192x192" href="favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        >
+        <link rel="stylesheet" href="styles.css">
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <!-- Navigation Header -->
+        <header class="header">
+            <nav class="nav">
+                <a href="index.html" class="nav-logo">
+                    <img
+                        src="favicon.png"
+                        alt="NextNotes"
+                        style="height: 28px; width: 28px; vertical-align: middle; margin-right: 0.5rem"
+                    >
+                    NextNotes
+                </a>
+                <button
+                    class="nav-toggle"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false"
+                >
+                    ☰
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#features" class="nav-link">Features</a></li>
+                    <li>
+                        <a
+                            href="#"
+                            class="nav-link"
+                            onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+                        >Download</a>
+                    </li>
+                    <li>
+                        <a href="privacy.html" class="nav-link">Privacy</a>
+                    </li>
+                    <li>
+                        <a href="impressum.html" class="nav-link">Impressum</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Your Nextcloud Notes, Perfected</h1>
+                    <p>
+                        The reliable, privacy-first Nextcloud Notes client for
+                        iOS and Android. Write, edit, and sync your Markdown
+                        notes — without ever losing a single keystroke.
+                    </p>
+                    <div class="app-store-buttons">
+                        <a
+                            href="https://apps.apple.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="app-store-badge"
+                        >
+                            <img
+                                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                                alt="Download on the App Store"
+                                style="height: 50px"
+                            >
+                        </a>
+                        <a
+                            href="https://play.google.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="app-store-badge"
+                        >
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                alt="Get it on Google Play"
+                                style="height: 50px"
+                            >
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- App Screenshots Section -->
+        <section
+            id="screenshots"
+            class="section-lg"
+            style="background: var(--bg-primary)"
+        >
+            <div class="container">
+                <div class="text-center mb-lg">
+                    <h2>The App in Action</h2>
+                    <p
+                        style="font-size: 1.125rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto"
+                    >
+                        Clean, focused, and reliable — every time
+                    </p>
+                </div>
+
+                <div
+                    style="display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap; padding: 2rem 0"
+                >
+                    <!-- Screenshot 1: Login -->
+                    <div style="text-align: center">
+                        <div
+                            style="width: 280px; border-radius: 30px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); overflow: hidden"
+                        >
+                            <img
+                                src="img/1.png"
+                                alt="Connect to your Nextcloud server"
+                                style="width: 100%; height: auto; display: block"
+                            >
+                        </div>
+                        <p
+                            style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.875rem"
+                        >
+                            Nextcloud Login
+                        </p>
+                    </div>
+
+                    <!-- Screenshot 2: Notes List -->
+                    <div style="text-align: center">
+                        <div
+                            style="width: 280px; border-radius: 30px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); overflow: hidden"
+                        >
+                            <img
+                                src="img/2.png"
+                                alt="Notes list with categories and favorites"
+                                style="width: 100%; height: auto; display: block"
+                            >
+                        </div>
+                        <p
+                            style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.875rem"
+                        >
+                            Your Notes
+                        </p>
+                    </div>
+
+                    <!-- Screenshot 3: Markdown Editor -->
+                    <div style="text-align: center">
+                        <div
+                            style="width: 280px; border-radius: 30px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); overflow: hidden"
+                        >
+                            <img
+                                src="img/3.png"
+                                alt="Markdown editor with preview toggle"
+                                style="width: 100%; height: auto; display: block"
+                            >
+                        </div>
+                        <p
+                            style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.875rem"
+                        >
+                            Markdown Editor
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features section-lg">
+            <div class="container">
+                <div class="text-center">
+                    <h2>Everything You Need for Mobile Note-Taking</h2>
+                    <p
+                        style="font-size: 1.125rem; max-width: 700px; margin: 0 auto; color: var(--text-secondary)"
+                    >
+                        NextNotes is built on three non-negotiable pillars:
+                        zero data loss, stable authentication, and a polished
+                        Markdown editor
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📝</div>
+                        <h3>Polished Markdown Editor</h3>
+                        <p>
+                            Write in Markdown with a rich formatting toolbar,
+                            then toggle to a beautiful preview in one tap.
+                            Reliable keyboard handling with no surprises.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">💾</div>
+                        <h3>Zero Data Loss</h3>
+                        <p>
+                            Every keystroke is persisted locally
+                            <strong>before</strong> any network call. Your
+                            notes are safe even if the server is unreachable
+                            or the app is closed unexpectedly.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🔐</div>
+                        <h3>Stable Authentication</h3>
+                        <p>
+                            App passwords stored securely in the OS Keychain
+                            (iOS) and Keystore (Android). Sessions
+                            auto-refresh silently — no repeated login prompts.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📴</div>
+                        <h3>Offline-First</h3>
+                        <p>
+                            Create and edit notes without an internet
+                            connection. A background sync queue picks up
+                            automatically when you're back online.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🗂️</div>
+                        <h3>Categories &amp; Favorites</h3>
+                        <p>
+                            Organize notes into categories, star your
+                            favorites, and filter instantly. Full support for
+                            the Nextcloud Notes folder structure.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Full-Text Search</h3>
+                        <p>
+                            Find any note instantly with fast, local
+                            full-text search. No round trip to the server
+                            required — results appear as you type.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="section" style="background: var(--bg-secondary)">
+            <div class="container">
+                <div class="text-center mb-lg">
+                    <h2>Up and Running in Minutes</h2>
+                    <p
+                        style="font-size: 1.125rem; color: var(--text-secondary)"
+                    >
+                        Three simple steps to sync your Nextcloud notes on
+                        mobile
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <div
+                        class="feature-card"
+                        style="background: var(--bg-primary)"
+                    >
+                        <div
+                            style="font-size: 3rem; font-weight: 700; color: var(--primary-color); margin-bottom: 1rem"
+                        >
+                            1
+                        </div>
+                        <h3>Connect</h3>
+                        <p>
+                            Enter your Nextcloud server URL and generate an
+                            app password in your Nextcloud settings. NextNotes
+                            never stores your main account password.
+                        </p>
+                    </div>
+
+                    <div
+                        class="feature-card"
+                        style="background: var(--bg-primary)"
+                    >
+                        <div
+                            style="font-size: 3rem; font-weight: 700; color: var(--primary-color); margin-bottom: 1rem"
+                        >
+                            2
+                        </div>
+                        <h3>Write</h3>
+                        <p>
+                            Create and edit notes with the polished Markdown
+                            editor. Use the formatting toolbar or write raw
+                            Markdown — then preview with a single tap.
+                        </p>
+                    </div>
+
+                    <div
+                        class="feature-card"
+                        style="background: var(--bg-primary)"
+                    >
+                        <div
+                            style="font-size: 3rem; font-weight: 700; color: var(--primary-color); margin-bottom: 1rem"
+                        >
+                            3
+                        </div>
+                        <h3>Sync</h3>
+                        <p>
+                            Notes sync automatically to your Nextcloud server
+                            in the background. Conflict detection keeps
+                            everything consistent across all your devices.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy & Pro Section -->
+        <section
+            id="download"
+            class="section-lg"
+            style="background: var(--bg-primary)"
+        >
+            <div class="container text-center">
+                <!-- Privacy First Notice -->
+                <div
+                    style="padding: 2rem; background: var(--bg-secondary); border: 2px solid var(--primary-color); border-radius: 16px; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto"
+                >
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem">🔒</div>
+                    <h3
+                        style="color: var(--primary-color); margin-bottom: 1rem"
+                    >
+                        100% Privacy First
+                    </h3>
+                    <p
+                        style="font-size: 1.125rem; color: var(--text-primary); margin-bottom: 1rem"
+                    >
+                        <strong>NextNotes stores NO data on our servers</strong>
+                    </p>
+                    <ul
+                        style="list-style: none; padding: 0; margin: 1rem auto; max-width: 520px; text-align: left"
+                    >
+                        <li
+                            style="padding: 0.5rem 0; color: var(--text-secondary)"
+                        >
+                            ✓ All notes remain on your device and your
+                            Nextcloud server
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; color: var(--text-secondary)"
+                        >
+                            ✓ No analytics or tracking of your note content
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; color: var(--text-secondary)"
+                        >
+                            ✓ Connects only to <strong>your own</strong>
+                            Nextcloud server
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; color: var(--text-secondary)"
+                        >
+                            ✓ App passwords stored in the secure OS Keychain /
+                            Keystore — never in plain text
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- NextNotes Pro -->
+                <div
+                    style="padding: 2rem; background: linear-gradient(135deg, #0ea5e9 0%, #0d9488 100%); border-radius: 16px; color: white"
+                >
+                    <h3
+                        style="color: white; font-size: 1.75rem; margin-bottom: 1rem"
+                    >
+                        NextNotes Pro
+                    </h3>
+                    <p
+                        style="font-size: 1.125rem; max-width: 600px; margin: 0 auto 1.5rem; color: rgba(255, 255, 255, 0.95)"
+                    >
+                        Upgrade to NextNotes Pro for an ad-free experience and
+                        access to all premium features
+                    </p>
+                    <ul
+                        style="list-style: none; padding: 0; margin: 1.5rem auto 2rem; max-width: 400px; text-align: left"
+                    >
+                        <li
+                            style="padding: 0.5rem 0; color: rgba(255, 255, 255, 0.95)"
+                        >
+                            ✓ No ads
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; color: rgba(255, 255, 255, 0.95)"
+                        >
+                            ✓ Unlimited notes
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; color: rgba(255, 255, 255, 0.95)"
+                        >
+                            ✓ Priority support
+                        </li>
+                        <li
+                            style="padding: 0.5rem 0; color: rgba(255, 255, 255, 0.95)"
+                        >
+                            ✓ Future premium features
+                        </li>
+                    </ul>
+                    <p
+                        style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem"
+                    >
+                        Upgrade available directly inside the app
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>NextNotes</h4>
+                        <p>
+                            The reliable Nextcloud Notes client for iOS and
+                            Android. Your notes, your server, your data.
+                        </p>
+                        <p
+                            style="font-size: 0.75rem; color: rgba(255,255,255,0.5); margin-top: 0.5rem"
+                        >
+                            * NextNotes is an independent app and is not
+                            officially developed or endorsed by Nextcloud GmbH.
+                        </p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Legal</h4>
+                        <ul class="footer-links">
+                            <li>
+                                <a href="privacy.html">Privacy Policy</a>
+                            </li>
+                            <li><a href="impressum.html">Impressum</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Download</h4>
+                        <ul class="footer-links">
+                            <li>
+                                <a
+                                    href="https://apps.apple.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >iOS App Store</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://play.google.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >Google Play Store</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2026 NextNotes. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
